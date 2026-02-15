@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Something</title>
+    <style>
+      body {
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        font-family: Arial;
+      }
+
+      img {
+        width: 400px;
+        border: 5px solid rgb(255, 255, 255);
+        border-radius: 10px;
+      }
+
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+    <img id="myImage" src="borb.webp" alt="Click the button!" />
+    <br />
+   
+    <script>
+      // Add your picture URLs here
+      var pictures = [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/320px-Cat03.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/320px-Cute_dog.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dog_Breeds.jpg/320px-Dog_Breeds.jpg",
+      ];
+
+      function showRandomPicture() {
+        var randomNumber = Math.floor(Math.random() * pictures.length);
+        document.getElementById("myImage").src = pictures[randomNumber];
+      }
+    </script>
+  </body>
+</html>
